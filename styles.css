@@ -87,6 +87,7 @@ p:not([class]):not(:last-child) {
   font-weight: 700;
   line-height: 2;
   text-transform: uppercase;
+  text-decoration: none;
   white-space: nowrap;
   background-color: var(--color-light);
   border: none;
@@ -95,6 +96,14 @@ p:not([class]):not(:last-child) {
 
 .button:hover {
   background-color: var(--color-ligh-grey);
+}
+
+.button.transparent {
+  height: var(--input-height);
+  padding-left: 31px;
+  padding-right: 80px;
+  background-color: transparent;
+  border: var(--border);
 }
 
 .container {
@@ -337,8 +346,16 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
+.motivation-card-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
 .motivation-card-description {
   max-width: 400px;
+}
+
+.motivation-card-description:not(:last-child) {
+  margin-bottom: 37px;
 }
 
 
