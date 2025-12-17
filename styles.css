@@ -148,12 +148,15 @@ p:not([class]):not(:last-child) {
   outline: none;
 }
 
-
-
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+}
+
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
 }
 
 .visually-hidden {
@@ -395,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .backdrop-title.centered::after {
-  top: -0.2em;
+  top: -0.3em;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -414,7 +417,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .training-types {
   position: relative;
-  margin-inline: auto;
   padding-top: 70px;
   padding-bottom: 120px;
   background-color: var(--color-dark);
@@ -444,6 +446,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .training-types-item-title {
   font-size: 16px;
+}
+
+.join-us {
+  background-color: var(--color-dark-alternate);
 }
 
 .join-us-video-wrapper {
@@ -552,8 +558,23 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 400px;
 }
 
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+.location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+}
 
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
 
 @media (max-width: 1919px) {
   .motivation-card-image {
